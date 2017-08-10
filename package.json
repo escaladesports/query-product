@@ -1,6 +1,6 @@
 {
   "name": "query-product",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:escaladesports/query-product.git",
   "author": "Kennedy Rose <krose@escaladesports.com>",
