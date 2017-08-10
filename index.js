@@ -1,6 +1,21 @@
 'use strict'
 module.exports = query => {
-	const products = require(`${process.cwd()}/json/product/all.json`)
+	let products
+	try{
+		products = require(`${process.cwd()}/json/product/all.json`)
+	}
+	catch(e){
+		products = false
+	}
+
+	if(products === false){
+		try{
+			products = require('../../json/product/all.json')
+		}
+		catch(e){
+			console.log('json/product/all.json not found')
+		}
+	}
 
 	// Find matches
 	const matches = []
