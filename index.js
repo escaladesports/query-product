@@ -1,6 +1,6 @@
 'use strict'
 module.exports = query => {
-	const products = require('./json/product/all.json')
+	const products = require(`${process.cwd()}/json/product/all.json`)
 
 	// Find matches
 	const matches = []
