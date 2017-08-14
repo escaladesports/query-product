@@ -1,6 +1,6 @@
 'use strict'
-module.exports = query => {
-	let products
+module.exports = function(query){
+	var products
 	try{
 		products = require(`${process.cwd()}/json/product/all.json`)
 	}
@@ -18,11 +18,11 @@ module.exports = query => {
 	}
 
 	// Find matches
-	const matches = []
-	for(let i in products){
-		const product = products[i]
-		let match = true
-		for(let i in query){
+	var matches = []
+	for(var i in products){
+		var product = products[i]
+		var match = true
+		for(var i in query){
 			if(query[i] !== product[i]){
 				match = false
 				break
